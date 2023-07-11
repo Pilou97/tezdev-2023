@@ -252,7 +252,7 @@ const App = () => {
    */
   const move = async (direction: "up" | "down" | "left" | "right") => {
     // curl -H "Content-Type: application/json" -vvv -d '["01"]' -X POST "http://localhost:8932/local/batcher/injection"
-    let payload = direction === "up" ? ["00"] : direction === "down" ? ["01"] : direction === "left" ? ["02"] : ["03"];
+    let payload = direction === "up" ? ["01"] : direction === "down" ? ["02"] : direction === "left" ? ["03"] : ["04"];
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
     let url = `${ROLLUP_URI}/local/batcher/injection`;

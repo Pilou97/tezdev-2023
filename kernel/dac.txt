@@ -1,0 +1,8 @@
+const PUBLIC_DAC_KEYS: [&str; 3] = [
+    "BLpk1nHoWTSPMiG1W8qpimTSqrosAxc1L33Hyb9xHgXeVSZkzg26BxMunwajX2zekW8KuuT8Y4LP",
+    "BLpk1nEyxfm3tzJ6Xx6S2UVgMonQ3KFBjKWEZ2TgJg89S7Mykb5dPsT8w7zeg1iUAVXgUqZqybX7",
+    "BLpk1rNLTcT3Z6Y8ndq3Dw5XBiJSHuVsMSkn6nczbdt29WG3ksHRw14vy4KqwfMiedmmVYEYC2Nw",
+];
+
+https://dac-coordinator.gcp.marigold.dev
+
