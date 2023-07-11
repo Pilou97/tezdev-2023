@@ -1,0 +1,29 @@
+html,
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvas {
+  background-color: white;
+  image-rendering: pixelated;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#canvas-player {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
