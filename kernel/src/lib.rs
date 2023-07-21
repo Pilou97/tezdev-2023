@@ -32,6 +32,10 @@ fn save_player(rt: &mut impl Runtime, player: Player) {
 #[derive(Debug, NomReader)]
 enum Message {
     UpgradeRequest(Certificate),
+    MoveUp,
+    MoveDown,
+    MoveLeft,
+    MoveRight,
 }
 
 fn read_message(rt: &mut impl Runtime) -> Option<Message> {
@@ -76,12 +80,16 @@ pub fn entry(rt: &mut impl Runtime) {
     debug_msg!(rt, "Hello TezDev 2023!!!\n");
 
     let player = load_player(rt);
-    let player = player.unwrap_or_default();
+    let mut player = player.unwrap_or_default();
 
     if let Some(message) = read_message(rt) {
         debug_msg!(rt, "message: {message:?}\n");
         match message {
             Message::UpgradeRequest(cert) => upgrade(rt, cert),
+            Message::MoveUp => player.y_position += 1,
+            Message::MoveDown => player.y_position -= 1,
+            Message::MoveLeft => player.x_position -= 1,
+            Message::MoveRight => player.x_position += 1,
         };
     };
 
